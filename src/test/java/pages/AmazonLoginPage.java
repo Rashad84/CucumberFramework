@@ -1,6 +1,5 @@
 package pages;
 
-import java.util.List;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,22 +13,16 @@ public class AmazonLoginPage {
 		PageFactory.initElements(Driver.getDriver(), this);
 	}
 	
-	@FindBy (id = "user-name")
-	public WebElement username;
+	@FindBy (id = "nav-link-accountList-nav-line-1")
+	public WebElement signInBtn;
 	
-	@FindBy (id = "password")
-	public WebElement password;
+	@FindBy (id = "ap_email")
+	public WebElement emailBox;
 	
-	@FindBy (id = "login-button")
-	public WebElement loginButton;
+	@FindBy (id = "continue")
+	public WebElement continueBtn;
 	
-	@FindBy (css = ".title")
-	public WebElement inventoryPageProductText;
-	
-	@FindBy (css = ".inventory_item")
-	public List<WebElement> inventoryItems;
-	
-	@FindBy (xpath = "//h3[@data-test='error']")
+	@FindBy (css = ".a-list-item")
 	public WebElement errorMessage;
 
 }
