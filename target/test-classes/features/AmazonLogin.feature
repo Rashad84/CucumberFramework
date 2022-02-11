@@ -21,7 +21,7 @@ Feature: Amazon Login
   I want to be able to login with valid credentials.
   I sould not be logged in with invalid credentials.
 
-  @amazonLogin
+  @amazonLogin @SmokeTests
   Scenario: User should be directed to log in page
   Given I am on amazon home page
   And The sign in button displays

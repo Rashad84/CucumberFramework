@@ -12,7 +12,7 @@ Feature: Sauce Demo Login
     Then I should be directed to inventory page
     And There should be 6 items in the page
 
-  @SauceInvalidLogin
+  @SauceInvalidLogin @SmokeTests
   Scenario: Invalid login test
     When I enter invalid username "standard_user" password "secret_invalid"
     And I click on the login button

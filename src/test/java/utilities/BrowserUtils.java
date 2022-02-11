@@ -115,5 +115,16 @@ public class BrowserUtils {
 		element.sendKeys(Keys.chord(Keys.CONTROL), "a");
 		element.sendKeys(Keys.DELETE);
 	}
+	
+	
+	public void switchWidow() {
+		
+	}
+	
+	
+	
+	
+	
+	
 
 }
