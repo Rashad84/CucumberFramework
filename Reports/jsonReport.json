@@ -1,13 +1,13 @@
 [
   {
-    "line": 1,
+    "line": 20,
     "elements": [
       {
-        "start_timestamp": "2022-02-08T01:26:34.292Z",
+        "start_timestamp": "2022-02-11T02:17:32.842Z",
         "before": [
           {
             "result": {
-              "duration": 1186000,
+              "duration": 1179000,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 5,
-        "name": "I should be able to select a date from date picker",
+        "line": 25,
+        "name": "User should be directed to log in page",
         "description": "",
-        "id": "demo-qa-scenarios;i-should-be-able-to-select-a-date-from-date-picker",
+        "id": "amazon-login;user-should-be-directed-to-log-in-page",
         "after": [
           {
             "result": {
-              "duration": 103000,
+              "duration": 175000,
               "status": "passed"
             },
             "match": {
@@ -35,65 +35,164 @@
         "steps": [
           {
             "result": {
-              "duration": 448000,
-              "status": "passed"
+              "status": "undefined"
             },
-            "line": 6,
-            "name": "I am on the date picker page \"https://demoqa.com/date-picker\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"https://demoqa.com/date-picker\"",
-                  "offset": 29
-                }
-              ],
-              "location": "step_definitions.DemoQADatePickerSteps.i_am_on_the_date_picker_page(java.lang.String)"
-            },
+            "line": 26,
+            "name": "I am on amazon home page",
+            "match": {},
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 138000,
-              "status": "passed"
+              "duration": 135000,
+              "status": "skipped"
             },
-            "line": 7,
-            "name": "I enter \"09/24/2027\" to date picker",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"09/24/2027\"",
-                  "offset": 8
-                }
-              ],
-              "location": "step_definitions.DemoQADatePickerSteps.i_enter_to_date_picker(java.lang.String)"
+            "line": 27,
+            "name": "The sign in button displays",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 280000,
+              "status": "skipped"
             },
+            "line": 28,
+            "name": "I click on the sign in button",
+            "match": {},
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 294000,
-              "status": "passed"
+              "duration": 211000,
+              "status": "skipped"
             },
-            "line": 8,
-            "name": "Date entered should be selected",
-            "match": {
-              "location": "step_definitions.DemoQADatePickerSteps.date_entered_should_be_selected()"
-            },
+            "line": 29,
+            "name": "I should be directed to log in page",
+            "match": {},
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@DemoQADatePicker"
+            "name": "@tag"
+          },
+          {
+            "name": "@amazonLogin"
+          },
+          {
+            "name": "@SmokeTests"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-02-11T02:17:32.926Z",
+        "before": [
+          {
+            "result": {
+              "duration": 106000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "step_definitions.Hook.setup()"
+            }
+          }
+        ],
+        "line": 32,
+        "name": "User should not be directed to password field when invalid email is given",
+        "description": "",
+        "id": "amazon-login;user-should-not-be-directed-to-password-field-when-invalid-email-is-given",
+        "after": [
+          {
+            "result": {
+              "duration": 84000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "step_definitions.Hook.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 33,
+            "name": "I am on the login page",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 131000,
+              "status": "skipped"
+            },
+            "line": 34,
+            "name": "I enter invalid email \"jon.dow@gmail.com\"",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 100000,
+              "status": "skipped"
+            },
+            "line": 35,
+            "name": "I click the continue button",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 87000,
+              "status": "skipped"
+            },
+            "line": 36,
+            "name": "I should get error message says \"We cannot find an account with that email address\"",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 93000,
+              "status": "skipped"
+            },
+            "line": 37,
+            "name": "I should still in the log in page",
+            "match": {},
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tag"
+          },
+          {
+            "name": "@amazonLogin"
+          },
+          {
+            "name": "@amazonInvalidUser"
           }
         ]
       }
     ],
-    "name": "Demo QA Scenarios",
-    "description": "         I want to practice different scenarios on Demo QA",
-    "id": "demo-qa-scenarios",
+    "name": "Amazon Login",
+    "description": "  I want to be able to login with valid credentials.\n  I sould not be logged in with invalid credentials.",
+    "id": "amazon-login",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/DemoQADatePicker.feature",
-    "tags": []
+    "uri": "file:src/test/resources/features/AmazonLogin.feature",
+    "tags": [
+      {
+        "name": "@tag",
+        "type": "Tag",
+        "location": {
+          "line": 19,
+          "column": 2
+        }
+      }
+    ]
   }
 ]

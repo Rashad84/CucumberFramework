@@ -6,17 +6,16 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.AmazonLoginPage;
-import pages.AmazonSearchPage;
 import utilities.Driver;
 import utilities.PropertiesReader;
 
-public class AmazonSearchSteps {
-
+public class AmazonLoginSreps {
+	
 	AmazonLoginPage amazonlp = new AmazonLoginPage();
 
 	@Given("I am on amazon home page")
 	public void i_am_on_amazon_home_page() {
-	    Driver.getDriver().get(PropertiesReader.getProperty("url"));
+	    Driver.getDriver().get(PropertiesReader.getProperty("amazonUrl"));
 	}
 	
 	@Given("The sign in button displays")
@@ -29,7 +28,7 @@ public class AmazonSearchSteps {
 		amazonlp.signInBtn.click();
 	}
 	
-	@Then("I should be directed to login page")
+	@Then("I should be directed to log in page")
 	public void i_should_be_directed_to_log_in_page() {
 		Assert.assertTrue(amazonlp.emailBox.isDisplayed());
 	}
@@ -38,7 +37,7 @@ public class AmazonSearchSteps {
 	// invalid user test #STARTs
 	@Given("I am on the login page")
 	public void i_am_on_the_login_page() {
-		Driver.getDriver().get(PropertiesReader.getProperty("url"));
+		Driver.getDriver().get(PropertiesReader.getProperty("amazonUrl"));
 		amazonlp.signInBtn.click();
 	    Assert.assertTrue(amazonlp.emailBox.isDisplayed());
 	}
@@ -59,10 +58,9 @@ public class AmazonSearchSteps {
 	@Then("I should still in the log in page")
 	public void i_should_still_in_the_log_in_page() {
 		Assert.assertTrue(amazonlp.emailBox.isDisplayed());
-	}	
-		
-		
-}	
-		
-		
+	}
 	
+	// invalid user test #ENDs
+}
+
+
