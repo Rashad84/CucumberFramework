@@ -117,14 +117,5 @@ public class BrowserUtils {
 	}
 	
 	
-	public void switchWidow() {
-		
-	}
-	
-	
-	
-	
-	
-	
 
 }

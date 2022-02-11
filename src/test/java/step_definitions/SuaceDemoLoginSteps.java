@@ -1,15 +1,18 @@
 package step_definitions;
 
 import org.junit.Assert;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.SauceDemoLoginPage;
+import utilities.BrowserUtils;
 import utilities.Driver;
 import utilities.PropertiesReader;
 
 public class SuaceDemoLoginSteps {
 	SauceDemoLoginPage page = new SauceDemoLoginPage();
+	BrowserUtils utils = new BrowserUtils();
 	
 	// valid test #Starts
 	@Given("I am on the SauceDemo login page")
@@ -48,6 +51,7 @@ public class SuaceDemoLoginSteps {
 	@Then("I should not be logged in")
 	public void i_should_not_be_logged_in() {
 	    Assert.assertTrue(page.username.isDisplayed());
+	    Assert.assertFalse(utils.isElementPresent(page.inventoryPageProductText));
 	}
 	@Then("Error message should display {string}")
 	public void error_message_should_display(String errorMessage) {
@@ -55,4 +59,5 @@ public class SuaceDemoLoginSteps {
 	}
 
 	// Invalid test #Ends
+
 }

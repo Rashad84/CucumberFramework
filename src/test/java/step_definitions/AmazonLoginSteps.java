@@ -9,7 +9,7 @@ import pages.AmazonLoginPage;
 import utilities.Driver;
 import utilities.PropertiesReader;
 
-public class AmazonLoginSreps {
+public class AmazonLoginSteps {
 	
 	AmazonLoginPage amazonlp = new AmazonLoginPage();
 

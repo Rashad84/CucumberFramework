@@ -16,31 +16,26 @@ public class DemoQADatePickerPage {
 	}
 	
 	@FindBy (id = "datePickerMonthYearInput")
-	public WebElement firstDatePicker1;
-	
-	
-	
-	@FindBy (id = "datePickerMonthYearInput")
 	public WebElement firstDatePicker;
-
+	
 	@FindBy (css = ".react-datepicker__year-select")
 	public WebElement yearDropDown;
-
+	
 	@FindBy (css = ".react-datepicker__month-select")
 	public WebElement monthDropDown;
-
+	
 	@FindBy (css = ".react-datepicker__day")
 	public List<WebElement> days;
-
-
+	
+	
 	BrowserUtils utils = new BrowserUtils();
-
+	
 	int month;
 	String day;
 	String year;
-
+	
 	public void pickADate(String date) {
-
+		
 		String[] dates = date.split("/");  // 12/11/2006
 	    // turn the month into int
 	    String monthOutofArray = dates[0];
@@ -49,7 +44,7 @@ public class DemoQADatePickerPage {
 	    }else {
 	    	month = Integer.parseInt(monthOutofArray);
 	    }
-
+	    
 	    // get the date out of string array
 	    if (dates[1].contains("0")) {
 	    	day = dates[1].substring(1);
@@ -58,10 +53,10 @@ public class DemoQADatePickerPage {
 	    }
 	    // year from the string array
 	    year = dates[2];
-
+		
 		utils.selectByValue(yearDropDown, year);
 		utils.selectByIndex(monthDropDown, month -1);
-
+		
 		for (WebElement webElement : days) {
 			if (webElement.getText().equals(day)) {
 				webElement.click();
@@ -69,7 +64,6 @@ public class DemoQADatePickerPage {
 			}
 		}
 	}
-
 }
 
 
