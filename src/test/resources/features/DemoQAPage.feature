@@ -13,7 +13,7 @@ Feature: DemoQA is a good website
       | Yes          | You have selected Yes        |
       | Impressive   | You have selected Impressive |
 
-  @DemoAlert1 @SmokeTests
+  @DemoAlert1 @SmokeTest
   Scenario: I am able to handle Alert
     Given I am on the Alerts page "https://demoqa.com/alerts"
     When I click on AlertButton element
