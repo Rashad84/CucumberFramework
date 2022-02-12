@@ -3,11 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-02-11T15:25:00.283Z",
+        "start_timestamp": "2022-02-12T15:21:28.651Z",
         "before": [
           {
             "result": {
-              "duration": 2152607000,
+              "duration": 2077098000,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 5,
-        "name": "I should be able to select a date from date picker",
+        "line": 14,
+        "name": "User is able to search multiple data set",
         "description": "",
-        "id": "demo-qa-scenarios;i-should-be-able-to-select-a-date-from-date-picker",
+        "id": "amazon-search;user-is-able-to-search-multiple-data-set;items;2",
         "after": [
           {
             "result": {
-              "duration": 106189000,
+              "duration": 208504000,
               "status": "passed"
             },
             "match": {
@@ -31,69 +31,488 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 3353418000,
+              "duration": 3636457000,
               "status": "passed"
             },
-            "line": 6,
-            "name": "I am on the date picker page \"https://demoqa.com/date-picker\"",
+            "line": 7,
+            "name": "I am on amazon home page",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"https://demoqa.com/date-picker\"",
-                  "offset": 29
-                }
-              ],
-              "location": "step_definitions.DemoQADatePickerSteps.i_am_on_the_date_picker_page(java.lang.String)"
+              "location": "step_definitions.AmazonLoginSteps.i_am_on_amazon_home_page()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1443427000,
+              "duration": 982837000,
               "status": "passed"
             },
-            "line": 7,
-            "name": "I enter \"09/24/2027\" to date picker",
+            "line": 8,
+            "name": "I search item \"Coffee mug\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"09/24/2027\"",
-                  "offset": 8
+                  "val": "\"Coffee mug\"",
+                  "offset": 14
                 }
               ],
-              "location": "step_definitions.DemoQADatePickerSteps.i_enter_to_date_picker(java.lang.String)"
+              "location": "step_definitions.AmazonSearchSteps.i_search_item(java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 15833000,
+              "duration": 2377052000,
               "status": "passed"
             },
-            "line": 8,
-            "name": "Date entered should be selected",
+            "line": 9,
+            "name": "I click search button",
             "match": {
-              "location": "step_definitions.DemoQADatePickerSteps.date_entered_should_be_selected()"
+              "location": "step_definitions.AmazonSearchSteps.i_click_search_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 42526000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Searched item \"Coffee mug\" should be displayed in the search bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Coffee mug\"",
+                  "offset": 14
+                }
+              ],
+              "location": "step_definitions.AmazonSearchSteps.searched_item_should_be_displayed_in_the_search_bar(java.lang.String)"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@DemoQADatePicker"
+            "name": "@amazonSearch"
+          },
+          {
+            "name": "@SmokeTests"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-02-12T15:21:38.065Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1445412000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "step_definitions.Hook.setup()"
+            }
+          }
+        ],
+        "line": 15,
+        "name": "User is able to search multiple data set",
+        "description": "",
+        "id": "amazon-search;user-is-able-to-search-multiple-data-set;items;3",
+        "after": [
+          {
+            "result": {
+              "duration": 230704000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "step_definitions.Hook.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 4409160000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I am on amazon home page",
+            "match": {
+              "location": "step_definitions.AmazonLoginSteps.i_am_on_amazon_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1007915000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I search item \"Pretty coffee mug\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Pretty coffee mug\"",
+                  "offset": 14
+                }
+              ],
+              "location": "step_definitions.AmazonSearchSteps.i_search_item(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3237083000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I click search button",
+            "match": {
+              "location": "step_definitions.AmazonSearchSteps.i_click_search_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 47279000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Searched item \"Pretty coffee mug\" should be displayed in the search bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Pretty coffee mug\"",
+                  "offset": 14
+                }
+              ],
+              "location": "step_definitions.AmazonSearchSteps.searched_item_should_be_displayed_in_the_search_bar(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@amazonSearch"
+          },
+          {
+            "name": "@SmokeTests"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-02-12T15:21:48.461Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1455729000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "step_definitions.Hook.setup()"
+            }
+          }
+        ],
+        "line": 16,
+        "name": "User is able to search multiple data set",
+        "description": "",
+        "id": "amazon-search;user-is-able-to-search-multiple-data-set;items;4",
+        "after": [
+          {
+            "result": {
+              "duration": 191357000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "step_definitions.Hook.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3210646000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I am on amazon home page",
+            "match": {
+              "location": "step_definitions.AmazonLoginSteps.i_am_on_amazon_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1031706000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I search item \"Cool coffee mug\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Cool coffee mug\"",
+                  "offset": 14
+                }
+              ],
+              "location": "step_definitions.AmazonSearchSteps.i_search_item(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2217795000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I click search button",
+            "match": {
+              "location": "step_definitions.AmazonSearchSteps.i_click_search_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 49104000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Searched item \"Cool coffee mug\" should be displayed in the search bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Cool coffee mug\"",
+                  "offset": 14
+                }
+              ],
+              "location": "step_definitions.AmazonSearchSteps.searched_item_should_be_displayed_in_the_search_bar(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@amazonSearch"
+          },
+          {
+            "name": "@SmokeTests"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-02-12T15:21:56.647Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1349763000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "step_definitions.Hook.setup()"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "User is able to search multiple data set",
+        "description": "",
+        "id": "amazon-search;user-is-able-to-search-multiple-data-set;items;5",
+        "after": [
+          {
+            "result": {
+              "duration": 166051000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "step_definitions.Hook.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2841361000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I am on amazon home page",
+            "match": {
+              "location": "step_definitions.AmazonLoginSteps.i_am_on_amazon_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1162408000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I search item \"Cute coffee mug\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Cute coffee mug\"",
+                  "offset": 14
+                }
+              ],
+              "location": "step_definitions.AmazonSearchSteps.i_search_item(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2173768000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I click search button",
+            "match": {
+              "location": "step_definitions.AmazonSearchSteps.i_click_search_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 44527000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Searched item \"Cute coffee mug\" should be displayed in the search bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Cute coffee mug\"",
+                  "offset": 14
+                }
+              ],
+              "location": "step_definitions.AmazonSearchSteps.searched_item_should_be_displayed_in_the_search_bar(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@amazonSearch"
+          },
+          {
+            "name": "@SmokeTests"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-02-12T15:22:04.410Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1385761000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "step_definitions.Hook.setup()"
+            }
+          }
+        ],
+        "line": 18,
+        "name": "User is able to search multiple data set",
+        "description": "",
+        "id": "amazon-search;user-is-able-to-search-multiple-data-set;items;6",
+        "after": [
+          {
+            "result": {
+              "duration": 231151000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "step_definitions.Hook.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3032043000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I am on amazon home page",
+            "match": {
+              "location": "step_definitions.AmazonLoginSteps.i_am_on_amazon_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 866333000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I search item \"Ugly coffee mug\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ugly coffee mug\"",
+                  "offset": 14
+                }
+              ],
+              "location": "step_definitions.AmazonSearchSteps.i_search_item(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3605002000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I click search button",
+            "match": {
+              "location": "step_definitions.AmazonSearchSteps.i_click_search_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 52558000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Searched item \"Ugly coffee mug\" should be displayed in the search bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ugly coffee mug\"",
+                  "offset": 14
+                }
+              ],
+              "location": "step_definitions.AmazonSearchSteps.searched_item_should_be_displayed_in_the_search_bar(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@amazonSearch"
+          },
+          {
+            "name": "@SmokeTests"
           }
         ]
       }
     ],
-    "name": "Demo QA Scenarios",
-    "description": "         I want to practice different scenarios on Demo QA",
-    "id": "demo-qa-scenarios",
+    "name": "Amazon Search",
+    "description": "         As a user, I should be able to search an item\n         and the searched item should be relavant to search",
+    "id": "amazon-search",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/DemoQADatePicker.feature",
+    "uri": "file:src/test/resources/features/AmazonSearch.feature",
     "tags": []
   }
 ]
