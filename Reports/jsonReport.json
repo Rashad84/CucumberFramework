@@ -3,11 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-02-12T15:21:28.651Z",
+        "start_timestamp": "2022-02-13T02:12:00.687Z",
         "before": [
           {
             "result": {
-              "duration": 2077098000,
+              "duration": 4016976000,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 14,
-        "name": "User is able to search multiple data set",
+        "line": 5,
+        "name": "As a user, I want to add a trade",
         "description": "",
-        "id": "amazon-search;user-is-able-to-search-multiple-data-set;items;2",
+        "id": "as-a-user--i-am-able-to-perform-trade-app-functions;as-a-user--i-want-to-add-a-trade",
         "after": [
           {
             "result": {
-              "duration": 208504000,
+              "duration": 135408000,
               "status": "passed"
             },
             "match": {
@@ -31,488 +31,165 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 3636457000,
+              "duration": 663695000,
               "status": "passed"
             },
-            "line": 7,
-            "name": "I am on amazon home page",
+            "line": 6,
+            "name": "I am on the Trade App log in page",
             "match": {
-              "location": "step_definitions.AmazonLoginSteps.i_am_on_amazon_home_page()"
+              "location": "step_definitions.TradeAppTrades.i_am_on_the_trade_app_log_in_page()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 982837000,
+              "duration": 244797000,
               "status": "passed"
             },
-            "line": 8,
-            "name": "I search item \"Coffee mug\"",
+            "line": 7,
+            "name": "I enter username \"helil\" password \"SuperHelil123!\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Coffee mug\"",
-                  "offset": 14
+                  "val": "\"helil\"",
+                  "offset": 17
+                },
+                {
+                  "val": "\"SuperHelil123!\"",
+                  "offset": 34
                 }
               ],
-              "location": "step_definitions.AmazonSearchSteps.i_search_item(java.lang.String)"
+              "location": "step_definitions.TradeAppTrades.i_enter_username_password(java.lang.String,java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 2377052000,
+              "duration": 859669000,
               "status": "passed"
             },
-            "line": 9,
-            "name": "I click search button",
+            "line": 8,
+            "name": "I click on Trade login button",
             "match": {
-              "location": "step_definitions.AmazonSearchSteps.i_click_search_button()"
+              "location": "step_definitions.TradeAppTrades.i_click_on_trade_login_button()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 42526000,
+              "duration": 98988000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I should be on Trade homepage",
+            "match": {
+              "location": "step_definitions.TradeAppTrades.i_should_be_on_trade_homepage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 204688000,
               "status": "passed"
             },
             "line": 10,
-            "name": "Searched item \"Coffee mug\" should be displayed in the search bar",
+            "name": "I click on Add Trade button",
+            "match": {
+              "location": "step_definitions.TradeAppTrades.i_click_on_add_trade_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 40139000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I should be on Save Trade page",
+            "match": {
+              "location": "step_definitions.TradeAppTrades.i_should_be_on_save_trade_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 397399000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I select \"Buy to Open\" and I enter symbol \"Flower\" entryDate \"04/04/2021\" entryPrice \"10.0\" exitDate \"01/11/2022\" exitPrice \"18\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Coffee mug\"",
-                  "offset": 14
+                  "val": "\"Buy to Open\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"Flower\"",
+                  "offset": 42
+                },
+                {
+                  "val": "\"04/04/2021\"",
+                  "offset": 61
+                },
+                {
+                  "val": "\"10.0\"",
+                  "offset": 85
+                },
+                {
+                  "val": "\"01/11/2022\"",
+                  "offset": 101
+                },
+                {
+                  "val": "\"18\"",
+                  "offset": 124
                 }
               ],
-              "location": "step_definitions.AmazonSearchSteps.searched_item_should_be_displayed_in_the_search_bar(java.lang.String)"
+              "location": "step_definitions.TradeAppTrades.i_select_and_i_enter_symbol_entry_date_entry_price_exit_date_exit_price(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 266698000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I click Save button",
+            "match": {
+              "location": "step_definitions.TradeAppTrades.i_click_save_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 915558000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "The trade is displayed on the trade table",
+            "match": {
+              "location": "step_definitions.TradeAppTrades.the_trade_is_displayed_on_the_trade_table()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@amazonSearch"
-          },
-          {
-            "name": "@SmokeTests"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2022-02-12T15:21:38.065Z",
-        "before": [
-          {
-            "result": {
-              "duration": 1445412000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "step_definitions.Hook.setup()"
-            }
-          }
-        ],
-        "line": 15,
-        "name": "User is able to search multiple data set",
-        "description": "",
-        "id": "amazon-search;user-is-able-to-search-multiple-data-set;items;3",
-        "after": [
-          {
-            "result": {
-              "duration": 230704000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "step_definitions.Hook.tearDown(io.cucumber.java.Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 4409160000,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "I am on amazon home page",
-            "match": {
-              "location": "step_definitions.AmazonLoginSteps.i_am_on_amazon_home_page()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 1007915000,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "I search item \"Pretty coffee mug\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Pretty coffee mug\"",
-                  "offset": 14
-                }
-              ],
-              "location": "step_definitions.AmazonSearchSteps.i_search_item(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 3237083000,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "I click search button",
-            "match": {
-              "location": "step_definitions.AmazonSearchSteps.i_click_search_button()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 47279000,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "Searched item \"Pretty coffee mug\" should be displayed in the search bar",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Pretty coffee mug\"",
-                  "offset": 14
-                }
-              ],
-              "location": "step_definitions.AmazonSearchSteps.searched_item_should_be_displayed_in_the_search_bar(java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@amazonSearch"
-          },
-          {
-            "name": "@SmokeTests"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2022-02-12T15:21:48.461Z",
-        "before": [
-          {
-            "result": {
-              "duration": 1455729000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "step_definitions.Hook.setup()"
-            }
-          }
-        ],
-        "line": 16,
-        "name": "User is able to search multiple data set",
-        "description": "",
-        "id": "amazon-search;user-is-able-to-search-multiple-data-set;items;4",
-        "after": [
-          {
-            "result": {
-              "duration": 191357000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "step_definitions.Hook.tearDown(io.cucumber.java.Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 3210646000,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "I am on amazon home page",
-            "match": {
-              "location": "step_definitions.AmazonLoginSteps.i_am_on_amazon_home_page()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 1031706000,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "I search item \"Cool coffee mug\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Cool coffee mug\"",
-                  "offset": 14
-                }
-              ],
-              "location": "step_definitions.AmazonSearchSteps.i_search_item(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 2217795000,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "I click search button",
-            "match": {
-              "location": "step_definitions.AmazonSearchSteps.i_click_search_button()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 49104000,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "Searched item \"Cool coffee mug\" should be displayed in the search bar",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Cool coffee mug\"",
-                  "offset": 14
-                }
-              ],
-              "location": "step_definitions.AmazonSearchSteps.searched_item_should_be_displayed_in_the_search_bar(java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@amazonSearch"
-          },
-          {
-            "name": "@SmokeTests"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2022-02-12T15:21:56.647Z",
-        "before": [
-          {
-            "result": {
-              "duration": 1349763000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "step_definitions.Hook.setup()"
-            }
-          }
-        ],
-        "line": 17,
-        "name": "User is able to search multiple data set",
-        "description": "",
-        "id": "amazon-search;user-is-able-to-search-multiple-data-set;items;5",
-        "after": [
-          {
-            "result": {
-              "duration": 166051000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "step_definitions.Hook.tearDown(io.cucumber.java.Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 2841361000,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "I am on amazon home page",
-            "match": {
-              "location": "step_definitions.AmazonLoginSteps.i_am_on_amazon_home_page()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 1162408000,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "I search item \"Cute coffee mug\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Cute coffee mug\"",
-                  "offset": 14
-                }
-              ],
-              "location": "step_definitions.AmazonSearchSteps.i_search_item(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 2173768000,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "I click search button",
-            "match": {
-              "location": "step_definitions.AmazonSearchSteps.i_click_search_button()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 44527000,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "Searched item \"Cute coffee mug\" should be displayed in the search bar",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Cute coffee mug\"",
-                  "offset": 14
-                }
-              ],
-              "location": "step_definitions.AmazonSearchSteps.searched_item_should_be_displayed_in_the_search_bar(java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@amazonSearch"
-          },
-          {
-            "name": "@SmokeTests"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2022-02-12T15:22:04.410Z",
-        "before": [
-          {
-            "result": {
-              "duration": 1385761000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "step_definitions.Hook.setup()"
-            }
-          }
-        ],
-        "line": 18,
-        "name": "User is able to search multiple data set",
-        "description": "",
-        "id": "amazon-search;user-is-able-to-search-multiple-data-set;items;6",
-        "after": [
-          {
-            "result": {
-              "duration": 231151000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "step_definitions.Hook.tearDown(io.cucumber.java.Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 3032043000,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "I am on amazon home page",
-            "match": {
-              "location": "step_definitions.AmazonLoginSteps.i_am_on_amazon_home_page()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 866333000,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "I search item \"Ugly coffee mug\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Ugly coffee mug\"",
-                  "offset": 14
-                }
-              ],
-              "location": "step_definitions.AmazonSearchSteps.i_search_item(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 3605002000,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "I click search button",
-            "match": {
-              "location": "step_definitions.AmazonSearchSteps.i_click_search_button()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 52558000,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "Searched item \"Ugly coffee mug\" should be displayed in the search bar",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Ugly coffee mug\"",
-                  "offset": 14
-                }
-              ],
-              "location": "step_definitions.AmazonSearchSteps.searched_item_should_be_displayed_in_the_search_bar(java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@amazonSearch"
-          },
-          {
-            "name": "@SmokeTests"
+            "name": "@AddTrade"
           }
         ]
       }
     ],
-    "name": "Amazon Search",
-    "description": "         As a user, I should be able to search an item\n         and the searched item should be relavant to search",
-    "id": "amazon-search",
+    "name": "As a user, I am able to perform Trade app functions",
+    "description": "  I want to add, delete and update trades",
+    "id": "as-a-user--i-am-able-to-perform-trade-app-functions",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/AmazonSearch.feature",
+    "uri": "file:src/test/resources/features/TradeAppTrades.feature",
     "tags": []
   }
 ]
