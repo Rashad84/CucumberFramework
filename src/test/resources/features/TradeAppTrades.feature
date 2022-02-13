@@ -1,7 +1,7 @@
 Feature: As a user, I am able to perform Trade app functions
   I want to add, delete and update trades
 
-  @AddTrade
+  @AddTrade @SmokeTests
   Scenario: As a user, I want to add a trade
   Given I am on the Trade App log in page
   When I enter username "helil" password "SuperHelil123!"
