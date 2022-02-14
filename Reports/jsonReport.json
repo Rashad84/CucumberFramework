@@ -3,11 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-02-13T02:12:00.687Z",
+        "start_timestamp": "2022-02-14T02:10:42.120Z",
         "before": [
           {
             "result": {
-              "duration": 4016976000,
+              "duration": 2273805000,
               "status": "passed"
             },
             "match": {
@@ -22,7 +22,7 @@
         "after": [
           {
             "result": {
-              "duration": 135408000,
+              "duration": 142841000,
               "status": "passed"
             },
             "match": {
@@ -35,7 +35,7 @@
         "steps": [
           {
             "result": {
-              "duration": 663695000,
+              "duration": 593267000,
               "status": "passed"
             },
             "line": 6,
@@ -47,7 +47,7 @@
           },
           {
             "result": {
-              "duration": 244797000,
+              "duration": 216966000,
               "status": "passed"
             },
             "line": 7,
@@ -69,7 +69,7 @@
           },
           {
             "result": {
-              "duration": 859669000,
+              "duration": 1000185000,
               "status": "passed"
             },
             "line": 8,
@@ -81,7 +81,7 @@
           },
           {
             "result": {
-              "duration": 98988000,
+              "duration": 82737000,
               "status": "passed"
             },
             "line": 9,
@@ -93,7 +93,7 @@
           },
           {
             "result": {
-              "duration": 204688000,
+              "duration": 165736000,
               "status": "passed"
             },
             "line": 10,
@@ -105,7 +105,7 @@
           },
           {
             "result": {
-              "duration": 40139000,
+              "duration": 40643000,
               "status": "passed"
             },
             "line": 11,
@@ -117,7 +117,7 @@
           },
           {
             "result": {
-              "duration": 397399000,
+              "duration": 368068000,
               "status": "passed"
             },
             "line": 12,
@@ -155,7 +155,7 @@
           },
           {
             "result": {
-              "duration": 266698000,
+              "duration": 314701000,
               "status": "passed"
             },
             "line": 13,
@@ -167,7 +167,7 @@
           },
           {
             "result": {
-              "duration": 915558000,
+              "duration": 905475000,
               "status": "passed"
             },
             "line": 14,
@@ -181,6 +181,9 @@
         "tags": [
           {
             "name": "@AddTrade"
+          },
+          {
+            "name": "@SmokeTests"
           }
         ]
       }
