@@ -12,7 +12,7 @@ import java.util.List;
 
 
 
-public class DPUtils {
+public class DBUtils {
 	
 	// in order to work with JDBC and connect to a Database, we need to follow
 		// certain steps:
