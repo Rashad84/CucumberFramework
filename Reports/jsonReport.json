@@ -1,13 +1,13 @@
 [
   {
-    "line": 20,
+    "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-02-16T05:10:33.918Z",
+        "start_timestamp": "2022-02-18T05:03:43.410Z",
         "before": [
           {
             "result": {
-              "duration": 2475051000,
+              "duration": 3234319000,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 32,
-        "name": "User should not be directed to password field when invalid email is given",
+        "line": 6,
+        "name": "I am able to create a Pet using Post request",
         "description": "",
-        "id": "amazon-login;user-should-not-be-directed-to-password-field-when-invalid-email-is-given",
+        "id": "as-a-user-i-am-able-to-perform-http-request;i-am-able-to-create-a-pet-using-post-request",
         "after": [
           {
             "result": {
-              "duration": 799889000,
+              "duration": 85930000,
               "status": "passed"
             },
             "match": {
@@ -35,107 +35,29 @@
         "steps": [
           {
             "result": {
-              "duration": 4588862000,
+              "duration": 2495946000,
               "status": "passed"
             },
-            "line": 33,
-            "name": "I am on the login page",
+            "line": 7,
+            "name": "I am able to perform Post request to create a pet with valid request body",
             "match": {
-              "location": "step_definitions.AmazonLoginSteps.i_am_on_the_login_page()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 67277000,
-              "status": "passed"
-            },
-            "line": 34,
-            "name": "I enter invalid email \"jon.dow@gmail.com\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"jon.dow@gmail.com\"",
-                  "offset": 22
-                }
-              ],
-              "location": "step_definitions.AmazonLoginSteps.i_enter_invalid_email(java.lang.String)"
+              "location": "step_definitions.PetStoreSteps.i_am_able_to_perform_post_request_to_create_a_pet_with_valid_request_body()"
             },
             "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 321685000,
-              "status": "passed"
-            },
-            "line": 35,
-            "name": "I click the continue button",
-            "match": {
-              "location": "step_definitions.AmazonLoginSteps.i_click_the_continue_button()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 90806000,
-              "status": "passed"
-            },
-            "line": 36,
-            "name": "I should get error message says \"We cannot find an account with that email address\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"We cannot find an account with that email address\"",
-                  "offset": 32
-                }
-              ],
-              "location": "step_definitions.AmazonLoginSteps.i_should_get_error_message_says(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 41066000,
-              "status": "passed"
-            },
-            "line": 37,
-            "name": "I should still in the log in page",
-            "match": {
-              "location": "step_definitions.AmazonLoginSteps.i_should_still_in_the_log_in_page()"
-            },
-            "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@tag"
-          },
-          {
-            "name": "@amazonLogin"
-          },
-          {
-            "name": "@amazonInvalidUser"
-          },
-          {
-            "name": "@SmokeTests"
+            "name": "@CreateAPet"
           }
         ]
       }
     ],
-    "name": "Amazon Login",
-    "description": "  I want to be able to login with valid credentials.\n  I sould not be logged in with invalid credentials.",
-    "id": "amazon-login",
+    "name": "As a user I am able to perform HTTP request",
+    "description": "         I want to perform GET, POST, PUT and DELETE \n         requests on Pet Store API.",
+    "id": "as-a-user-i-am-able-to-perform-http-request",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/AmazonLogin.feature",
-    "tags": [
-      {
-        "name": "@tag",
-        "type": "Tag",
-        "location": {
-          "line": 19,
-          "column": 2
-        }
-      }
-    ]
+    "uri": "file:src/test/resources/features/PetStore.feature",
+    "tags": []
   }
 ]
