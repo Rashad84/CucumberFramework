@@ -33,7 +33,8 @@ public class PetStoreAPI_Tests {
   @Test
   public void createAPet() {
 	  requestURL = "https://petstore.swagger.io/v2/pet";
-	  requestBody = new File("./src/test/resources/jsonFiles/addAPet.json");
+	  requestBody = new File("./src/test/resources/jsonFiles/addAPet.json\n"
+	  		+ "");
 	  
 	  response = given().contentType(ContentType.JSON).accept(ContentType.JSON).body(requestBody)
 	  .when().post(requestURL);
