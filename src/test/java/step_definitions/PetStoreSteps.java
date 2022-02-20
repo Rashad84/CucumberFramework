@@ -73,7 +73,8 @@ public class PetStoreSteps {
 		@Given("I have the POST request URL and valid request body")
 		public void i_have_the_post_request_url_and_valid_request_body() {
 			requestURL = "https://petstore.swagger.io/v2/pet";
-			requestBody = new File("./src/test/resources/jsonFiles/addAPet.json");
+			requestBody = new File("./src/test/resources/jsonFiles/addAPet.json\n"
+					+ "");
 		}
 		@When("I perform POST request to URL with request body")
 		public void i_perform_post_request_to_url_with_request_body() {
@@ -108,7 +109,8 @@ public class PetStoreSteps {
 		@Given("I have the POST request URL and invalid request body")
 		public void i_have_the_post_request_url_and_invalid_request_body() {
 			requestURL = "https://petstore.swagger.io/v2/pet";
-			requestBody = new File("./src/test/resources/jsonFiles/invalidRequestBody.json");
+			requestBody = new File("./src/test/resources/jsonFiles/invalidRequestBody.json\n"
+					+ "");
 		}
 		@Then("Response status code should be {int} invalid input")
 		public void response_status_code_should_be_invalid_input(Integer expectedStatusCode) {
