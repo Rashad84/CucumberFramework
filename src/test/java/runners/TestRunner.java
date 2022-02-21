@@ -10,8 +10,8 @@ import io.cucumber.junit.CucumberOptions;
 		"json:Reports/jsonReport.json"},
 		features="./src/test/resources/features",
 		glue="step_definitions",
-		dryRun=false,
-		tags="@PostToAddPet" 
+		dryRun=true,
+		tags="@getByPetID" 
 		)
 public class TestRunner {
 

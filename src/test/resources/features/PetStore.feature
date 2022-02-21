@@ -1,10 +1,8 @@
-
-@Regression
 Feature: As a user I am able to perform HTTP request
          I want to perform GET, POST, PUT and DELETE 
          requests on Pet Store API.
 
-  @CreateAPet @SmokeTests
+  @CreateAPet
   Scenario: I am able to create a Pet using Post request
     When I am able to perform Post request to create a pet with valid request body
 
@@ -44,7 +42,7 @@ Feature: As a user I am able to perform HTTP request
     Then Response status code should be 404
     And Content type should be "application/json"
 
-  @getByPetID @SmokeTests
+  @getByPetID
   Scenario: As a user, I should be able to perform GET request to find a pet by id
     Given I have the GET request URL
     When I perform GET request to URL with pet id 6622456
@@ -54,7 +52,7 @@ Feature: As a user I am able to perform HTTP request
     And Category id is 22232, category name is "Booboo"
     And Tags id is 22232, and tags name is "dog"
 
-  @getAPetByInvalidID @SmokeTests
+  @getAPetByInvalidID
   Scenario: As a user, I should be able to perform GET request to find a pet by invalid id
     Given I have the GET request URL
     When I perform GET request to URL with invalid id 66224
@@ -62,7 +60,7 @@ Feature: As a user I am able to perform HTTP request
     And Content type should be "application/json"
     And message should be "Pet not found"
 
-  @deleteByID @SmokeTests
+  @deleteByID
   Scenario: As a user, I am able to delete a pet
     Given I have the Delete request URL
     When I perform DELETE request to URL with valid id 662
@@ -70,7 +68,7 @@ Feature: As a user I am able to perform HTTP request
     And Content type should be "application/json"
     And message should be "662"
 
-  @updateAPet @SmokeTests
+  @updateAPet
   Scenario: As a user, I am able to update a pet
     Given I have the Update request URL
     When I perform UPDATE request to update Name to existing Pet
